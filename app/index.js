@@ -1,12 +1,20 @@
-'use strict';
+"use strict";
 
 var Generator = require("yeoman-generator");
 var chalk = require("chalk");
 var yosay = require("yosay");
+var superb = require("superb");
 var mkdirp = require("mkdirp");
+var validator = require("validator");
 
 module.exports = class extends Generator {
     prompting() {
+
+        this.log(yosay(
+            "Welcome to " + superb() + " java-bones!\n " +
+            "I'll walk you through the installation."
+        ));
+
         return this.prompt([{
             type: "input",
             name: "user",
@@ -16,7 +24,10 @@ module.exports = class extends Generator {
             type: "input",
             name: "email",
             message: "What\'s your email adress?",
-            default: "user@noreply.com"
+            default: "user@noreply.com",
+            validate: function (input) {
+                return validator.isEmail(input);
+            }
         }, {
             type: "input",
             name: "artifactID",
