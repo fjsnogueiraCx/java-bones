@@ -1,0 +1,38 @@
+{
+  "name": "generator-java-bones",
+  "version": "0.0.1",
+  "description": "A yeoman-generator for Java projects",
+  "keywords": [
+    "yeoman-generator",
+    "java",
+    "maven"
+  ],
+  "author": {
+    "name": "Simon Dirmeier",
+    "email": "mail@simon-dirmeier.net",
+    "url": "https://github.com/dirmeier"
+  },
+  "scripts": {
+    "test": "istanbul cover node_modules/mocha/bin/_mocha && codecov"
+  },
+  "license": "GPL-3.0",
+  "dependencies": {    
+    "path": "^0.12.7",
+    "superb": "^1.3.0",
+    "validator": "^7.0.0",
+    "yeoman-generator": "^1.0.0",
+    "yosay": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dirmeier/java-bones"
+  },
+  "devDependencies": {
+    "codecov": "^2.1.0",
+    "istanbul": "^0.4.5",
+    "jshint": "^2.9.4",
+    "mocha": "^3.2.0",
+    "yeoman-assert": "^3.0.0",
+    "yeoman-test": "^1.6.0"
+  }
+}
