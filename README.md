@@ -5,6 +5,7 @@
 [![appveyor](https://ci.appveyor.com/api/projects/status/ugxd2285camqs6ud/branch/master?svg=true)](https://ci.appveyor.com/project/dirmeier/java-bones/branch/master)
 [![codecov](https://codecov.io/gh/dirmeier/java-bones/branch/master/graph/badge.svg)](https://codecov.io/gh/dirmeier/java-bones)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/fc5f2b85be274404990b9282eeaa484d)](https://www.codacy.com/app/simon-dirmeier/java-bones?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dirmeier/java-bones&amp;utm_campaign=Badge_Grade)
+[![npm version](https://badge.fury.io/js/generator-java-bones.svg)](https://www.npmjs.com/package/generator-java-bones)
 
 A yeoman generator for Java projects. 
 
@@ -71,7 +72,7 @@ This builds the skeleton. Afterwards modify the sources and build the package wi
 
 ```sh
   ./${artifactID}
-``
+```
 
 where `${artifactID}` will be the name of your package.
 
