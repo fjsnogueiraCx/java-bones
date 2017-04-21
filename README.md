@@ -1,36 +1,72 @@
-<h1 align="center"> R-- </h1>
+<h1 align="center"> java-bones </h1>
 
 [![Project Status](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
-[![Build Status](https://travis-ci.org/dirmeier/R--.svg?branch=master)](https://travis-ci.org/dirmeier/R--)
-[![codecov](https://codecov.io/gh/dirmeier/R--/branch/master/graph/badge.svg)](https://codecov.io/gh/dirmeier/R--)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/14653f9754cb40408ad614b305fb0c5d)](https://www.codacy.com/app/simon-dirmeier/R--?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dirmeier/R--&amp;utm_campaign=Badge_Grade)
+[![travis](https://travis-ci.org/dirmeier/java-bones.svg?branch=master)](https://travis-ci.org/dirmeier/java-bones)
+[![appveyor](https://ci.appveyor.com/api/projects/status/ugxd2285camqs6ud/branch/master?svg=true)](https://ci.appveyor.com/project/dirmeier/java-bones/branch/master)
+[![codecov](https://codecov.io/gh/dirmeier/java-bones/branch/master/graph/badge.svg)](https://codecov.io/gh/dirmeier/java-bones)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/fc5f2b85be274404990b9282eeaa484d)](https://www.codacy.com/app/simon-dirmeier/java-bones?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dirmeier/java-bones&amp;utm_campaign=Badge_Grade)
 
-An interpreter for R in Java.
-
-![R--](https://github.com/dirmeier/R--/blob/master/_fig/demo.gif "R--")
+A yeoman generator for Java projects. 
 
 ## Introduction
 
-A toy implementation of an interpreter for `R` written in `Java`. This project is mainly to understand how interpreters, lexers/tokenizers, parsers, ASTs and things like that work exactly. Since `R` and `Java` are the greatest languages of all time, I chose to try it on these. However the lexer of course can translate to any language. I'll try to cover:
+`java-bones` is a yeoman-generator for `Java`-projects using `maven`. `java-bones` creates a project that uses
 
-* <strike>basic arithmetic</strike>,
-* functions,
-* data-structures,
-* clauses,
-* loops.
+* a GPL3 license,
+* static code analysis and reports using `pmd` and `checkstyle` ,
+* a unit-test suite using `JUnit` and logging using `log4j/slf4j`
+* badges for the *project status*, *build status* using Travis CI and *code coverage* using Jacoco,
+* custom README.md, TODO.md and VERSIONS.md files and
+* a prototype `Main.java` + `TestSuite.java` 
 
-So far `R--` is able to substract or add two integers :scream:.
-
-## Installation and Usage
-
-Clone/download the project and run:
+The resulting folder-structure looks like this:
 
 ```sh
-  mvn clean package
-  ./R--
+	|____.gitattributes
+	|____.gitignore
+	|____.travis.yml
+	|____.yo-rc.json
+	|____build.sh
+	|____checkstyle.xml
+	|____artifactID
+	|____LICENSE
+	|____pom.xml
+	|____README.md
+	|____ruleset.xml
+	|____src
+	| |____main
+	| | |____java
+	| | | |____net
+	| | | | |____groupID
+	| | | | | |____artifactID
+	| | | | | | |____Main.java
+	| |____test
+	| | |____java
+	| | | |____net
+	| | | | |____groupID
+	| | | | | |____tests
+	| | | | | | |____artifactID
+	| | | | | | | |____TestSuite.java
+	|____TODO.md
+	|____VERSIONS.md
 ```
 
-This of course requires you to have `maven`.
+## Installation
+
+Yeoman comes with `npm`, so install this first and then:
+
+```sh
+  npm install -g yo
+  yo java-bones
+```
+
+This builds the skeleton. Afterwards modify the sources and build the package with:
+
+```sh
+  ./${artifactID},
+``
+
+where `${artifactID}` will be the name of your package.
 
 ## Author
 
