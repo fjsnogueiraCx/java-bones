@@ -13,7 +13,7 @@
     "url": "https://github.com/dirmeier"
   },
   "scripts": {
-    "test": "istanbul cover node_modules/mocha/bin/_mocha && codecov"
+    "test": "istanbul cover node_modules/mocha/bin/_mocha"
   },
   "license": "GPL-3.0",
   "dependencies": {
