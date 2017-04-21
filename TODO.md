@@ -1,6 +1,6 @@
 ## TODOs
 
-* none so far
+* add more licences
 
 ### Author
 

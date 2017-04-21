@@ -14,10 +14,10 @@ A yeoman generator for Java projects.
 
 * a GPL3 license,
 * static code analysis and reports using `pmd` and `checkstyle` ,
-* a unit-test suite using `JUnit` and logging using `log4j/slf4j`
+* a unit-test suite using `JUnit` and logging using `log4j/slf4j`,
 * badges for the *project status*, *build status* using Travis CI and *code coverage* using Jacoco,
 * custom README.md, TODO.md and VERSIONS.md files and
-* a prototype `Main.java` + `TestSuite.java` 
+* a prototype `Main.java` + `TestSuite.java`.
 
 The resulting folder-structure looks like this:
 
@@ -54,17 +54,23 @@ The resulting folder-structure looks like this:
 
 ## Installation
 
-Yeoman comes with `npm`, so install this first and then:
+Yeoman comes with [```npm```](https://nodejs.org/en/download/current/), so install it first and then call:
 
 ```sh
   npm install -g yo
+  npm install -g generator-java-bones
+```
+
+Once you have the package, you can create a scaffold using:
+
+```sh
   yo java-bones
 ```
 
 This builds the skeleton. Afterwards modify the sources and build the package with:
 
 ```sh
-  ./${artifactID},
+  ./${artifactID}
 ``
 
 where `${artifactID}` will be the name of your package.
