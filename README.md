@@ -22,13 +22,14 @@ A yeoman generator for Java projects.
 The resulting folder-structure looks like this:
 
 ```sh
+	|____.codecov.yml
 	|____.gitattributes
 	|____.gitignore
 	|____.travis.yml
 	|____.yo-rc.json
 	|____build.sh
 	|____checkstyle.xml
-	|____artifactID
+	|____emptyproject4j
 	|____LICENSE
 	|____pom.xml
 	|____README.md
@@ -38,14 +39,14 @@ The resulting folder-structure looks like this:
 	| | |____java
 	| | | |____net
 	| | | | |____groupID
-	| | | | | |____artifactID
+	| | | | | |____emptyproject4j
 	| | | | | | |____Main.java
 	| |____test
 	| | |____java
 	| | | |____net
 	| | | | |____groupID
 	| | | | | |____tests
-	| | | | | | |____artifactID
+	| | | | | | |____emptyproject4j
 	| | | | | | | |____TestSuite.java
 	|____TODO.md
 	|____VERSIONS.md

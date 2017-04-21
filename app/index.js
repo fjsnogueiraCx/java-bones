@@ -114,6 +114,10 @@ module.exports = class extends Generator {
 		this.fs.copy(
 			this.templatePath('build.sh'),
 		 	this.destinationPath('build.sh'));
+		
+		this.fs.copy(
+			this.templatePath('codecov.yml'),
+		 	this.destinationPath('.codecov.yml'));
 
 		this.fs.copy(
 			this.templatePath('gitignore'),
