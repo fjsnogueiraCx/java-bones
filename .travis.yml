@@ -3,14 +3,11 @@ language: node_js
 os: linux
 dist: trusty
 
-install:
-  - npm install -g grunt-cli
-  - npm install -g bower
+install:  
   - npm install -g jshint
   - npm install -g codecov
   - npm install -g istanbul
   - npm install
-  - bower install
 
 script:
   - npm test
