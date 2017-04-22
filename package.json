@@ -1,9 +1,12 @@
 {
   "name": "generator-java-bones",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A yeoman-generator for Java projects",
+  "homepage": "https://github.com/dirmeier/java-bones",
+  "bugs": "https://github.com/dirmeier/java-bones/issues",
   "keywords": [
     "yeoman-generator",
+    "yeoman",
     "java",
     "maven"
   ],
@@ -27,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dirmeier/java-bones"
+    "url": "https://github.com/dirmeier/java-bones.git"
   },
   "devDependencies": {
     "codecov": "^2.1.0",
