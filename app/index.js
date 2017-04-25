@@ -64,16 +64,22 @@ module.exports = class extends Generator {
                 artifactID: this.args.artifactID,
             });
 
-        this.fs.copyTpl(
-            this.templatePath("pom.xml"),
-            this.destinationPath('pom.xml'), {
-                githubuser: this.args.githubuser,
-                artifactID: this.args.artifactID,
-                groupID: this.args.groupID,
-                desc: this.args.desc,
-                email: this.args.email,
-                user: this.args.user
-            });
+        var cpyt = [
+            "pom.xml", "README.md", "TODO.md", "VERSIONS.md",
+            "build.sh", "LICENSE", "config"
+        ];
+        for (var i in cpyt) {
+            this.fs.copyTpl(
+                this.templatePath(cpyt[i]),
+                this.destinationPath(cpyt[i]), {
+                    githubuser: this.args.githubuser,
+                    artifactID: this.args.artifactID,
+                    groupID: this.args.groupID,
+                    desc: this.args.desc,
+                    email: this.args.email,
+                    user: this.args.user
+                });
+        }
 
         this.fs.copyTpl(
             this.templatePath("Main.java"),
@@ -99,61 +105,15 @@ module.exports = class extends Generator {
                 user: this.args.user
             });
 
-        this.fs.copyTpl(
-            this.templatePath("README.md"),
-            this.destinationPath("README.md"), {
-                artifactID: this.args.artifactID,
-                githubuser: this.args.githubuser,
-                desc: this.args.desc,
-                email: this.args.email,
-                user: this.args.user
-            });
 
-        this.fs.copyTpl(
-            this.templatePath("TODO.md"),
-            this.destinationPath("TODO.md"), {
-                email: this.args.email,
-                user: this.args.user
-            });
-
-        this.fs.copyTpl(
-            this.templatePath("VERSIONS.md"),
-            this.destinationPath("VERSIONS.md"), {
-                email: this.args.email,
-                user: this.args.user
-            });
-
-        this.fs.copy(
-            this.templatePath("build.sh"),
-            this.destinationPath("build.sh"));
-
-        this.fs.copy(
-            this.templatePath("codecov.yml"),
-            this.destinationPath(".codecov.yml"));
-
-        this.fs.copy(
-            this.templatePath("gitignore"),
-            this.destinationPath(".gitignore"));
-
-        this.fs.copy(
-            this.templatePath("LICENSE"),
-            this.destinationPath("LICENSE"));
-
-        this.fs.copy(
-            this.templatePath("travis.yml"),
-            this.destinationPath(".travis.yml"));
-
-        this.fs.copy(
-            this.templatePath("gitattributes"),
-            this.destinationPath(".gitattributes"));
-
-        this.fs.copy(
-            this.templatePath("ruleset.xml"),
-            this.destinationPath("ruleset.xml"));
-
-        this.fs.copy(
-            this.templatePath("checkstyle.xml"),
-            this.destinationPath("checkstyle.xml"));
+        var bcpy = [
+          "codecov.yml", "gitignore", "gitattributes", "travis.yml"
+        ];
+        for (var i in bcpy) {
+            this.fs.copy(
+                this.templatePath(bcpy[i]),
+                this.destinationPath("." + bcpy[i]));
+        }
     }
 
     end() {

@@ -4,14 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId><%= groupID %></groupId>
-    <artifactId><%= artifactID %></artifactId>
+    <groupId>net.groupID</groupId>
+    <artifactId>emptyproject4j</artifactId>
     <version>0.1</version>
     <packaging>jar</packaging>
 
-    <name><%= artifactID %></name>
-    <description><%= desc %></description>
-    <url>https://github.com/<%= githubuser %>/<%= artifactID %></url>
+    <name>emptyproject4j</name>
+    <description>description</description>
+    <url>https://github.com/githubuser/emptyproject4j</url>
 
     <licenses>
         <license>
@@ -22,15 +22,15 @@
 
     <developers>
         <developer>
-            <name><%= user %></name>
-            <email><%= email %></email>
+            <name>user</name>
+            <email>user@noreply.com</email>
         </developer>
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/<%= githubuser %>/<%= artifactID %>.git</connection>
-        <developerConnection>scm:git:ssh://github.com:<%= githubuser %>/artifactID.git</developerConnection>
-        <url>https://github.com/<%= githubuser %>/<%= artifactID %>/tree/master</url>
+        <connection>scm:git:git://github.com/githubuser/emptyproject4j.git</connection>
+        <developerConnection>scm:git:ssh://github.com:githubuser/artifactID.git</developerConnection>
+        <url>https://github.com/githubuser/emptyproject4j/tree/master</url>
     </scm>
 
     <properties>
@@ -109,11 +109,11 @@
                         </execution>
                     </executions>
                     <configuration>
-                        <finalName><%= artifactID %>-standalone</finalName>
+                        <finalName>emptyproject4j-standalone</finalName>
                         <appendAssemblyId>false</appendAssemblyId>
                          <archive>
                             <manifest>
-                                <mainClass><%= groupID %>.<%= artifactID %>.Main</mainClass>
+                                <mainClass>net.groupID.emptyproject4j.Main</mainClass>
                             </manifest>
                         </archive>
                         <descriptorRefs>

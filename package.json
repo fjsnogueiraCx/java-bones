@@ -1,6 +1,6 @@
 {
   "name": "generator-java-bones",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A yeoman-generator for Java projects",
   "homepage": "https://github.com/dirmeier/java-bones",
   "bugs": "https://github.com/dirmeier/java-bones/issues",

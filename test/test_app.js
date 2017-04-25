@@ -6,7 +6,7 @@ var helpers = require("yeoman-test");
 
 beforeEach(function () {  
   return helpers.run(path.join(__dirname, "../app"))
-})
+});
 
 describe("java-bones:app", function () {
   it("builds files", function () {
@@ -18,7 +18,7 @@ describe("java-bones:app", function () {
       ".gitignore", ".gitattributes", 
       ".travis.yml", ".codecov.yml",     
       "build.sh", "emptyproject4j", 
-      "checkstyle.xml", "ruleset.xml",       
+      "config/checkstyle/checkstyle.xml", "config/pmd/ruleset.xml",
       "pom.xml",
       "src/main/java/net/groupID/emptyproject4j/Main.java",
       "src/test/java/net/groupID/tests/emptyproject4j/TestSuite.java"]);

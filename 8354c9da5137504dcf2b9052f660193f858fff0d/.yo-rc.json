@@ -1,0 +1,10 @@
+{
+  "generator-java-bones": {
+    "user": "user",
+    "email": "user@noreply.com",
+    "artifactID": "emptyproject4j",
+    "groupID": "net.groupID",
+    "desc": "description",
+    "githubuser": "githubuser"
+  }
+}
