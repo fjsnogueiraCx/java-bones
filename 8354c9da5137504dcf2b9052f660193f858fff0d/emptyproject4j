@@ -1,8 +1,0 @@
-#!/bin/bash
-
-if [ ! -f  "target/emptyproject4j-standalone.jar" ]
-then
-    mvn clean package
-fi
-
-java -jar target/emptyproject4j-standalone.jar
